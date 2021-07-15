@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+
+{% block header %}
+  <title>Result</title>
+{% endblock %}
+        
+{% block content %}
+
+
+          <br>
+          <div class="container">
+              <h1 class='heading text-center'>Result</h1>
+              
+            </div>
+        
+           
+
+
+          <!-- container -->
+          <div class="container">
+            <div class="row">
+              <div class="col-md ">
+                {% if result %}
+                 <h3>This is a {{ result.result }}</h3> 
+                 
+                 <img src="{{result.image}}"  class="img-fluid" alt="Responsive image">
+                
+                {% endif %}
+
+              </div>
+             
+              <div class="col-md">
+                <img src="{{ url_for('static',filename = 'img/catdog.png')}}" class="img-fluid" alt="Responsive image">
+              </div>
+            </div>
+          </div>
+
+
+          <!-- end containers -->
+          <br>
+        
+       
+        
+  
+{% endblock%}
